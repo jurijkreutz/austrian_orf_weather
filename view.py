@@ -25,3 +25,11 @@ def print_selection(list_of_selection_items):
 
 def get_user_input(label):
     return input(label)
+
+
+def input_to_continue():
+    input("Press Enter to continue...")
+
+
+def print_waiting_message():
+    print("Getting data from wetter.orf.at ...")
