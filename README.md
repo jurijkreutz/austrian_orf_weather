@@ -17,6 +17,7 @@ ORF is the national broadcaster in Austria. ORF.at is a well known news and info
 - Ability to show weather forecasts
 - Ability to choose from a wide array from weather stations
 - Ability to show highest temperature within the last 24 hours
+- Ability to show regional capital city with highest/lowest temperature
 - Ability to show temperature graph in console
 
 ## Running the script
