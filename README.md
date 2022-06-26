@@ -10,7 +10,7 @@ ORF is the national broadcaster in Austria. ORF.at is a well known news and info
 - Scraping data from wetter.orf.at
 - Showing the average temperature in the country right now
 - Showing temperatures from regional weather stations
-- Ability to show when the temperature measurement was taken
+- Showing when the temperature measurement was taken
 
 ## To-Do
 - Handling Exceptions (e.g. wrong inputs from user)
