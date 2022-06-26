@@ -21,3 +21,7 @@ def get_temperature_of_city(city_index):
     city_temperature = scraper.get_temperature_from_city(chosen_city)
     view.clear_screen()
     return str(city_temperature)[0:5]
+
+
+def get_time_of_last_measurement():
+    

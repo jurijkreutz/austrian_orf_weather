@@ -13,8 +13,11 @@ def decode_website(url):
 
 def get_temperature_from_city(cityname):
     html = decode_website(MAIN_URL)
-    div_index = html.find("<h3 itemprop=\"name\">" + cityname + "</h3>")
+    index_of_city_name = html.find("<h3 itemprop=\"name\">" + cityname + "</h3>")
     characters_before_temperature = 58
-    length_of_html_p_element = div_index+characters_before_temperature+len(cityname)
+    length_of_html_p_element = index_of_city_name+characters_before_temperature+len(cityname)
     temperature = html[length_of_html_p_element:length_of_html_p_element+4]
     return float(temperature.replace(",", "."))
+
+
+
