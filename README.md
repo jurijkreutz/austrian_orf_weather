@@ -11,14 +11,16 @@ ORF is the national broadcaster in Austria. ORF.at is a well known news and info
 - Showing the average temperature in the country right now
 - Showing temperatures from regional weather stations
 - Showing when the temperature measurement was taken
+- Showing regional city with highest temperature
+- Showing temperature graph in console (simple)
 
 ## To-Do
 - Handling Exceptions (e.g. wrong inputs from user)
 - Ability to show weather forecasts
 - Ability to choose from a wide array from weather stations
 - Ability to show highest temperature within the last 24 hours
-- Ability to show regional capital city with highest/lowest temperature
-- Ability to show temperature graph in console
+- Ability to show regional capital city with lowest temperature
+- Ability to show temperature graph in console (better style)
 
 ## Running the script
 To use the script, just type
