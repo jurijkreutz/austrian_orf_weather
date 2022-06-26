@@ -24,4 +24,5 @@ def get_temperature_of_city(city_index):
 
 
 def get_time_of_last_measurement():
-    
+    time = scraper.get_measurement_time_from_main_page()
+    return time

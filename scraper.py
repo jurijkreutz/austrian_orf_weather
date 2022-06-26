@@ -20,4 +20,12 @@ def get_temperature_from_city(cityname):
     return float(temperature.replace(",", "."))
 
 
+def get_measurement_time_from_main_page():
+    html = decode_website(MAIN_URL)
+    last_measurement_text = "Letzte Messwerte von "
+    index_of_measurement_time = html.find(last_measurement_text)
+    length_of_text_before_time = index_of_measurement_time + len(last_measurement_text)
+    measurement_time = html[length_of_text_before_time:length_of_text_before_time+5]
+    return str(measurement_time)
+
 

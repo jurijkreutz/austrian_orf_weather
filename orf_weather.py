@@ -20,6 +20,8 @@ def show_average_temperature():
     view.clear_screen()
     average_temperature = datahandler.get_average_temperature_of_country()
     view.print_message(f"The average temperature in Austria: {average_temperature} °C.")
+    measurement_time = datahandler.get_time_of_last_measurement()
+    view.print_message(f"Time of measurement: {measurement_time}.")
 
 
 def show_temperature_in_austrian_regional_city():
@@ -29,6 +31,8 @@ def show_temperature_in_austrian_regional_city():
     user_selection = int(user_selection)
     city_temperature = datahandler.get_temperature_of_city(user_selection)
     view.print_message(f"The temperature in {AUSTRIAN_REGIONAL_CAPITALS[user_selection]}: {city_temperature}.")
+    measurement_time = datahandler.get_time_of_last_measurement()
+    view.print_message(f"Time of measurement: {measurement_time}.")
 
 
 if __name__ == "__main__":
