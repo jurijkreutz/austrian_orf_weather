@@ -12,7 +12,9 @@ def show_main_menu():
     view.print_cloud_logo()
     view.print_message("Austrian weather // ORF Wetter Web Scraper")
     main_menu_list = ["Average temperature in Austria right now",
-                      "Temperatures in Austrian regional capital cities"]
+                      "Temperatures in Austrian regional capital cities",
+                      "City with highest temperature right now",
+                      "Temperature Graph"]
     view.print_selection(main_menu_list)
 
 
@@ -35,6 +37,22 @@ def show_temperature_in_austrian_regional_city():
     view.print_message(f"Time of measurement: {measurement_time}.")
 
 
+def show_city_with_highest_temperature():
+    view.clear_screen()
+    hottest_cities_dict = datahandler.get_city_with_highest_temperature()
+    all_cities_dict = datahandler.get_temperatures_for_all_cities()
+    view.print_city_and_temperature_dict("Hottest city/cities:", hottest_cities_dict)
+    view.print_line_breaker()
+    view.print_temperature_graph(all_cities_dict)
+    view.print_line_breaker()
+
+
+def show_temperature_graph():
+    view.clear_screen()
+    all_cities_dict = datahandler.get_temperatures_for_all_cities()
+    view.print_temperature_graph(all_cities_dict)
+
+
 if __name__ == "__main__":
     while True:
         show_main_menu()
@@ -43,4 +61,8 @@ if __name__ == "__main__":
             show_average_temperature()
         elif user_selection == "1":
             show_temperature_in_austrian_regional_city()
+        elif user_selection == "2":
+            show_city_with_highest_temperature()
+        elif user_selection == "3":
+            show_temperature_graph()
         view.input_to_continue()
