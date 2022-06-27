@@ -45,12 +45,18 @@ def show_city_with_highest_temperature():
     view.print_line_breaker()
     view.print_temperature_graph(all_cities_dict)
     view.print_line_breaker()
+    measurement_time = datahandler.get_time_of_last_measurement()
+    view.print_message(f"Time of measurement: {measurement_time}.")
 
 
 def show_temperature_graph():
     view.clear_screen()
     all_cities_dict = datahandler.get_temperatures_for_all_cities()
     view.print_temperature_graph(all_cities_dict)
+    view.print_line_breaker()
+    measurement_time = datahandler.get_time_of_last_measurement()
+    view.print_message(f"Time of measurement: {measurement_time}.")
+
 
 
 if __name__ == "__main__":
