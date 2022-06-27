@@ -2,6 +2,10 @@ REGIONAL_CAPITALS_SHORT = ["WIE", "STPÖ", "EISENSTD", "GRAZ",
                            "LINZ", "KLGFT", "SLZBRG", "INNSBR",
                            "BRGNZ"]
 
+AUSTRIAN_REGIONAL_CAPITALS = ["Wien", "St. Pölten", "Eisenstadt", "Graz",
+                              "Linz", "Klagenfurt", "Salzburg", "Innsbruck",
+                              "Bregenz"]
+
 
 def clear_screen():
     print("\033c")
@@ -32,7 +36,7 @@ def print_city_and_temperature_dict(label, dictionary):
     print(label)
     # Dict Format: {"Klagenfurt": 20.1}
     for key in dictionary:
-        print(f"{key}: {dictionary[key]}")
+        print(f"{AUSTRIAN_REGIONAL_CAPITALS[int(key)]}: {dictionary[key]}")
 
 
 def get_user_input(label):
